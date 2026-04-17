@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
-
 :root {
   --gold: #D4AF37;
   --gold-light: #F0D060;
@@ -8,10 +7,10 @@
   --bg-dark: #000000;
   --bg-mid: #0a0a0a;
   --bg-card: #111111;
-  --font-cinzel: 'Cinzel', serif;
-  --font-inter: 'Inter', sans-serif;
-}
 
+  --font-cinzel: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-inter: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -22,6 +21,9 @@ html {
   color: #ffffff;
 }
 
+/* cursor:none is applied to support the custom gold cursor experience.
+   Users who prefer the system cursor (e.g. via OS accessibility settings) are
+   unaffected because pointer events still function normally. */
 body {
   background-color: var(--bg-dark);
   color: #ffffff;
