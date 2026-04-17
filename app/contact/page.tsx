@@ -58,6 +58,8 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // NOTE: This is a front-end demo. No data is transmitted to a backend.
+    // Integrate your preferred API/email service (e.g. Resend, SendGrid) here.
     setSubmitted(true);
   };
 
@@ -149,10 +151,10 @@ export default function ContactPage() {
                     <Send size={24} style={{ color: 'var(--gold)' }} />
                   </div>
                   <h3 className="text-2xl font-black mb-3" style={{ fontFamily: 'var(--font-cinzel)', color: 'var(--gold)' }}>
-                    Message Sent!
+                    Form Submitted
                   </h3>
                   <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
-                    We&apos;ll get back to you within 4 business hours.
+                    Thank you! This is a demo — connect a backend (e.g. Resend or SendGrid) to enable real delivery. We&apos;ll get back to you within 4 business hours once live.
                   </p>
                 </motion.div>
               ) : (
