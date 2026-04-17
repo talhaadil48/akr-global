@@ -24,7 +24,6 @@ export default function RootLayout({
       <head>
       </head>
       <body className="min-h-full flex flex-col bg-black text-white">
-        <CustomCursor />
         <SmoothScrollProvider>
           <div className="flex flex-col min-h-full bg-black">{children}</div>
         </SmoothScrollProvider>

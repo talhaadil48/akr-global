@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
 :root {
   --gold: #D4AF37;
@@ -22,51 +22,11 @@ html {
   color: #ffffff;
 }
 
-/* cursor:none is applied to support the custom gold cursor experience.
-   Users who prefer the system cursor (e.g. via OS accessibility settings) are
-   unaffected because pointer events still function normally. */
 body {
-  cursor: none;
   background-color: var(--bg-dark);
   color: #ffffff;
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
-}
-
-/* Custom Cursor */
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, border-color 0.2s, background-color 0.2s;
-  mix-blend-mode: difference;
-}
-
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  background-color: var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 100000;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-ring.hover {
-  width: 56px;
-  height: 56px;
-  border-color: var(--gold-light);
-  background-color: rgba(212, 175, 55, 0.1);
 }
 
 /* Glassmorphism */
