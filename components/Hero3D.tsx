@@ -56,6 +56,9 @@ export default function Hero3D() {
   };
 
   return (
+    /* suppressHydrationWarning: R3F/Canvas causes unavoidable hydration differences
+       (WebGL context only available client-side). This is safe here since the
+       component is dynamically imported with ssr:false in its parent. */
     <div
       style={{ width: '100%', height: '100%' }}
       onMouseMove={handleMouseMove}
