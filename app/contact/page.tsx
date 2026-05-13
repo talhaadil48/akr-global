@@ -65,6 +65,9 @@ export default function ContactPage() {
                   <li><strong>Email:</strong> info@taximservice.com</li>
                   <li><strong>Address:</strong> St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi</li>
                 </ul>
+                <p className="mt-3 text-xs text-[var(--text-muted)]">
+                  We provide UK-focused taxi dispatch support with structured onboarding, UK operator workflows, and SLA-driven service delivery.
+                </p>
               </div>
 
               <div className="glass-strong rounded-2xl p-6">
