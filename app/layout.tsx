@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "AKR Global Studios is an elite outsourcing agency delivering world-class web development, UI/UX design, mobile apps, and branding solutions to ambitious businesses worldwide.",
   keywords: ["digital agency", "web development", "UI/UX design", "outsourcing", "branding"],
+  icons  : {
+    icon: "/svg.png",
+    shortcut: "/svg.png",
+    apple: "/svg.png",
+  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -40,17 +41,16 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 group">
-            <span
-              className="font-cinzel text-xl font-bold tracking-widest text-white group-hover:opacity-90 transition-opacity"
-              style={{ fontFamily: 'var(--font-cinzel)' }}
-            >
-              AKR{' '}
-              <span style={{ color: 'var(--gold)' }} className="gold-glow-text">
-                GLOBAL
-              </span>
-            </span>
+          {/* Logo (Image) */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/logo.png"
+              alt="AKR Global Logo"
+              width={140}
+              height={40}
+              priority
+              className="h-15 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -61,7 +61,10 @@ export default function Navbar() {
                   href={link.href}
                   className="relative text-sm font-medium tracking-wide transition-colors group"
                   style={{
-                    color: pathname === link.href ? 'var(--gold)' : 'rgba(255,255,255,0.75)',
+                    color:
+                      pathname === link.href
+                        ? 'var(--gold)'
+                        : 'rgba(255,255,255,0.75)',
                     fontFamily: 'var(--font-inter)',
                   }}
                 >
@@ -89,16 +92,19 @@ export default function Navbar() {
                 fontFamily: 'var(--font-inter)',
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--gold)';
+                (e.currentTarget as HTMLElement).style.backgroundColor =
+                  'var(--gold)';
                 (e.currentTarget as HTMLElement).style.color = '#000';
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent';
+                (e.currentTarget as HTMLElement).style.backgroundColor =
+                  'transparent';
                 (e.currentTarget as HTMLElement).style.color = 'var(--gold)';
               }}
             >
               Get Started
             </Link>
+
             <button
               className="md:hidden text-white p-1"
               onClick={() => setMobileOpen((v) => !v)}
@@ -133,17 +139,25 @@ export default function Navbar() {
                   className="text-2xl font-semibold tracking-widest transition-colors"
                   style={{
                     fontFamily: 'var(--font-cinzel)',
-                    color: pathname === link.href ? 'var(--gold)' : 'rgba(255,255,255,0.85)',
+                    color:
+                      pathname === link.href
+                        ? 'var(--gold)'
+                        : 'rgba(255,255,255,0.85)',
                   }}
                 >
                   {link.label}
                 </Link>
               </motion.div>
             ))}
+
             <Link
               href="/contact"
               className="px-8 py-3 border rounded-full text-base font-semibold mt-4 transition-all"
-              style={{ borderColor: 'var(--gold)', color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
+              style={{
+                borderColor: 'var(--gold)',
+                color: 'var(--gold)',
+                fontFamily: 'var(--font-inter)',
+              }}
             >
               Get Started
             </Link>

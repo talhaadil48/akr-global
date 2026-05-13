@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { X, Globe, MessageCircle, Star } from 'lucide-react';
 
 const serviceLinks = [
@@ -27,21 +28,39 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t" style={{ borderColor: 'rgba(212,175,55,0.15)', backgroundColor: 'var(--bg-mid)' }}>
+    <footer
+      className="border-t"
+      style={{
+        borderColor: 'rgba(212,175,55,0.15)',
+        backgroundColor: 'var(--bg-mid)',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3
-              className="text-2xl font-bold tracking-widest mb-3"
-              style={{ fontFamily: 'var(--font-cinzel)', color: '#fff' }}
+            <Link href="/" className="inline-flex items-center group mb-4">
+              <Image
+                src="/logo.png"
+                alt="AKR Global Logo"
+                width={160}
+                height={45}
+                priority
+                className="h-20 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              />
+            </Link>
+
+            <p
+              className="text-sm leading-relaxed mb-6"
+              style={{
+                color: 'rgba(255,255,255,0.5)',
+                fontFamily: 'var(--font-inter)',
+              }}
             >
-              AKR{' '}
-              <span style={{ color: 'var(--gold)' }}>GLOBAL</span>
-            </h3>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}>
-                24/7 taxi dispatch and operational outsourcing support for UK operators.
-              </p>
+              24/7 taxi dispatch and operational outsourcing support for UK
+              operators.
+            </p>
+
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
@@ -49,7 +68,10 @@ export default function Footer() {
                   href={href}
                   aria-label={label}
                   className="w-9 h-9 rounded-full flex items-center justify-center border transition-all duration-300 hover:scale-110"
-                  style={{ borderColor: 'rgba(212,175,55,0.3)', color: 'rgba(255,255,255,0.6)' }}
+                  style={{
+                    borderColor: 'rgba(212,175,55,0.3)',
+                    color: 'rgba(255,255,255,0.6)',
+                  }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLElement;
                     el.style.borderColor = 'var(--gold)';
@@ -73,7 +95,10 @@ export default function Footer() {
           <div>
             <h4
               className="text-xs font-semibold tracking-[0.2em] uppercase mb-5"
-              style={{ color: 'var(--gold)', fontFamily: 'var(--font-cinzel)' }}
+              style={{
+                color: 'var(--gold)',
+                fontFamily: 'var(--font-cinzel)',
+              }}
             >
               Services
             </h4>
@@ -83,9 +108,18 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="text-sm transition-colors duration-200 hover:opacity-100"
-                    style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = 'var(--gold)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.5)'; }}
+                    style={{
+                      color: 'rgba(255,255,255,0.5)',
+                      fontFamily: 'var(--font-inter)',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLElement).style.color =
+                        'var(--gold)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.color =
+                        'rgba(255,255,255,0.5)';
+                    }}
                   >
                     {link.label}
                   </Link>
@@ -98,7 +132,10 @@ export default function Footer() {
           <div>
             <h4
               className="text-xs font-semibold tracking-[0.2em] uppercase mb-5"
-              style={{ color: 'var(--gold)', fontFamily: 'var(--font-cinzel)' }}
+              style={{
+                color: 'var(--gold)',
+                fontFamily: 'var(--font-cinzel)',
+              }}
             >
               Company
             </h4>
@@ -108,9 +145,18 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="text-sm transition-colors duration-200"
-                    style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = 'var(--gold)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.5)'; }}
+                    style={{
+                      color: 'rgba(255,255,255,0.5)',
+                      fontFamily: 'var(--font-inter)',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLElement).style.color =
+                        'var(--gold)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.color =
+                        'rgba(255,255,255,0.5)';
+                    }}
                   >
                     {link.label}
                   </Link>
@@ -123,23 +169,39 @@ export default function Footer() {
           <div>
             <h4
               className="text-xs font-semibold tracking-[0.2em] uppercase mb-5"
-              style={{ color: 'var(--gold)', fontFamily: 'var(--font-cinzel)' }}
+              style={{
+                color: 'var(--gold)',
+                fontFamily: 'var(--font-cinzel)',
+              }}
             >
               Connect
             </h4>
-            <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}>
+            <ul
+              className="space-y-3 text-sm"
+              style={{
+                color: 'rgba(255,255,255,0.5)',
+                fontFamily: 'var(--font-inter)',
+              }}
+            >
               <li>
-                <a href="mailto:info@taximservice.com" className="transition-colors hover:text-white">
+                <a
+                  href="mailto:info@taximservice.com"
+                  className="transition-colors hover:text-white"
+                >
                   info@taximservice.com
                 </a>
               </li>
               <li>
-                <a href="tel:+923109910222" className="transition-colors hover:text-white">
+                <a
+                  href="tel:+923109910222"
+                  className="transition-colors hover:text-white"
+                >
                   +92 310 991 0222
                 </a>
               </li>
               <li className="leading-relaxed">
-                St 16, Chaklala Scheme-III,<br />
+                St 16, Chaklala Scheme-III,
+                <br />
                 Chaklala Cantt, Rawalpindi
               </li>
             </ul>
@@ -149,7 +211,11 @@ export default function Footer() {
         {/* Bottom */}
         <div
           className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 border-t text-xs"
-          style={{ borderColor: 'rgba(212,175,55,0.1)', color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-inter)' }}
+          style={{
+            borderColor: 'rgba(212,175,55,0.1)',
+            color: 'rgba(255,255,255,0.35)',
+            fontFamily: 'var(--font-inter)',
+          }}
         >
           <p>© {new Date().getFullYear()} AKR Global. All rights reserved.</p>
           <p>

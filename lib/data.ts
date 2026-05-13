@@ -119,15 +119,53 @@ export const testimonials = [
 
 export const faqs = [
   {
+    question: 'What services do you offer for taxi companies?',
+    answer:
+      'We provide 24/7 dispatch support, call handling, administrative assistance, accounting support, email management, customer service, and digital marketing solutions for taxi and private hire businesses.',
+  },
+  {
     question: 'Can I start with nights only or overflow only?',
-    answer: 'Yes. Many clients start with limited hours and expand as needed.',
+    answer:
+      'Yes. Many clients start with limited hours such as night shifts or overflow coverage and expand later as needed.',
   },
   {
     question: 'Will customers know it’s outsourced?',
-    answer: 'No. We answer in your business name and follow your tone and rules.',
+    answer:
+      'No. We operate as part of your business, answering calls in your company name and following your tone, procedures, and rules.',
+  },
+  {
+    question: 'How does your pricing structure work?',
+    answer:
+      'We offer flexible pricing options including hourly rates, fixed monthly retainers, and custom packages based on your operational requirements.',
+  },
+  {
+    question: 'Can you integrate with our existing systems?',
+    answer:
+      'Yes. We can work with most major taxi dispatch and booking systems including CAB9, Autocab, iCabbi, and CabTreasure.',
   },
   {
     question: 'How fast can we start?',
-    answer: 'After onboarding and setup, we can begin quickly depending on the coverage required.',
+    answer:
+      'After onboarding and setup, we can usually begin operations quickly depending on the level of coverage and integration required.',
+  },
+  {
+    question: 'Do you offer a trial period?',
+    answer:
+      'Yes. We offer a 3-day free trial so you can experience our service quality and workflow before committing.',
+  },
+  {
+    question: 'Do you provide 24/7 support?',
+    answer:
+      'Yes. We can provide full 24/7 coverage including weekends, holidays, late nights, and peak-hour overflow support.',
+  },
+  {
+    question: 'Can you handle customer complaints and bookings?',
+    answer:
+      'Yes. Our team can manage bookings, driver coordination, customer queries, complaints, and general support tasks professionally.',
+  },
+  {
+    question: 'Is your service suitable for small taxi firms?',
+    answer:
+      'Absolutely. We work with both small local operators and larger fleets, scaling our support based on your business size and needs.',
   },
 ];

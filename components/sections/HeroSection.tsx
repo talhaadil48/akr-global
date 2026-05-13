@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { heroContent } from '@/lib/data';
 import GoldButton from '@/components/GoldButton';
 
-const HERO_BG_IMAGE = 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=2000&q=80';
+const HERO_BG_IMAGE = './HERO1.png';
 
 export default function HeroSection() {
   return (

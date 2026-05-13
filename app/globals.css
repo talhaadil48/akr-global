@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 :root {
-  --gold: #D4AF37;
-  --gold-light: #F0D060;
-  --gold-dark: #C9A227;
+  --gold: #D1B383;
+  --gold-light: #F0DFBA;
+  --gold-dark: #AB8354;
+
   --bg-dark: #000000;
   --bg-mid: #0a0a0a;
   --bg-card: #111111;
