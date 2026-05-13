@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-label="Replace with your services image">
+  <rect width="1000" height="700" fill="#f8f8f8"/>
+  <rect x="35" y="35" width="930" height="630" rx="24" fill="#fff" stroke="#d4af37" stroke-width="5"/>
+  <text x="500" y="320" text-anchor="middle" font-size="42" fill="#111" font-family="Arial, sans-serif">Services Image Placeholder</text>
+  <text x="500" y="380" text-anchor="middle" font-size="26" fill="#8b6d15" font-family="Arial, sans-serif">Swap with dispatch support imagery</text>
+</svg>

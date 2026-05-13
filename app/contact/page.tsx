@@ -1,273 +1,147 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, ChevronDown, Send } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
-import { faqs } from '@/lib/data';
 
-const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'hello@akrglobal.studio', href: 'mailto:hello@akrglobal.studio' },
-  { icon: Phone, label: 'Phone', value: '+1 (234) 567-890', href: 'tel:+1234567890' },
-  { icon: MapPin, label: 'Office', value: 'Dubai Media City, UAE', href: '#' },
+const faqs = [
+  {
+    question: 'Can I start with nights only or overflow only?',
+    answer: 'Yes. Many clients start with limited hours and expand as needed.',
+  },
+  {
+    question: 'Will customers know it’s outsourced?',
+    answer: 'No. We answer in your business name and follow your tone and rules.',
+  },
+  {
+    question: 'How fast can we start?',
+    answer: 'After onboarding and setup, we can begin quickly depending on the coverage required.',
+  },
 ];
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div
-      className="border-b cursor-pointer"
-      style={{ borderColor: 'rgba(212,175,55,0.12)' }}
-      onClick={() => setOpen((v) => !v)}
-    >
-      <div className="flex items-center justify-between py-5 gap-4">
-        <h3 className="text-base font-semibold" style={{ fontFamily: 'var(--font-inter)', color: '#fff' }}>
-          {question}
-        </h3>
-        <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }}>
-          <ChevronDown size={18} style={{ color: 'var(--gold)', flexShrink: 0 }} />
-        </motion.div>
-      </div>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden"
-          >
-            <p className="pb-5 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
-              {answer}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
+const serviceOptions = [
+  '24/7 Dispatch Coverage',
+  'Overflow Support',
+  'Admin Support',
+  'Accounting Support',
+  'Marketing Support',
+];
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState({
-    name: '', email: '', service: '', message: '',
-  });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // NOTE: This is a front-end demo. No data is transmitted to a backend.
-    // Integrate your preferred API/email service (e.g. Resend, SendGrid) here.
     setSubmitted(true);
   };
 
   return (
     <>
       <Navbar />
-      <main style={{ backgroundColor: 'var(--bg-dark)' }}>
-        {/* Header */}
-        <section className="pt-36 pb-16" style={{ backgroundColor: 'var(--bg-mid)' }}>
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-xs tracking-[0.3em] uppercase font-semibold mb-4"
-              style={{ color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
-            >
-              Get in Touch
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black mb-4"
-              style={{ fontFamily: 'var(--font-cinzel)' }}
-            >
-              Let&apos;s <span style={{ color: 'var(--gold)' }}>Connect</span>
-            </motion.h1>
+      <main className="bg-[var(--bg-main)] text-[var(--text-main)]">
+        <section className="pt-36 pb-16 bg-[var(--bg-soft)] border-b border-black/10">
+          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-black mb-4">Talk to the AKR Global Team</h1>
+              <p className="text-base text-[var(--text-muted)] leading-relaxed">
+                Whether you need 24/7 dispatch coverage, overflow support, admin help, or marketing—tell us what’s happening in your operation today. We’ll recommend the right plan and next steps.
+              </p>
+            </div>
+            <div className="glass-strong rounded-2xl p-4">
+              <img src="/images/contact-hero-placeholder.svg" alt="Contact and support placeholder" className="w-full h-auto rounded-xl" />
+            </div>
           </div>
         </section>
 
-        {/* Contact Info + Form */}
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Info */}
-            <div>
-              <h2 className="text-3xl font-black mb-8" style={{ fontFamily: 'var(--font-cinzel)' }}>
-                Start a <span style={{ color: 'var(--gold)' }}>Conversation</span>
-              </h2>
-              <p className="text-base leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
-                Whether you have a detailed brief or just a spark of an idea, we&apos;d love to hear from you. Our team typically responds within 4 business hours.
-              </p>
-              <div className="space-y-5">
-                {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    className="flex items-center gap-5 glass-strong rounded-xl p-5 transition-all hover:gold-glow group"
-                  >
-                    <div
-                      className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"
-                      style={{ backgroundColor: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.2)' }}
-                    >
-                      <Icon size={18} style={{ color: 'var(--gold)' }} />
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-widest mb-0.5" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-inter)' }}>{label}</p>
-                      <p className="text-sm font-semibold" style={{ color: '#fff', fontFamily: 'var(--font-inter)' }}>{value}</p>
-                    </div>
-                  </a>
-                ))}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
+            <div className="space-y-8">
+              <div className="glass-strong rounded-2xl p-6">
+                <h2 className="text-2xl font-black mb-4">Contact Details</h2>
+                <ul className="space-y-2 text-sm text-[var(--text-muted)]">
+                  <li><strong>Phone:</strong> +92 310 991 0222</li>
+                  <li><strong>Email:</strong> info@taximservice.com</li>
+                  <li><strong>Address:</strong> St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi</li>
+                </ul>
               </div>
 
-              {/* Map placeholder */}
-              <div
-                className="mt-8 rounded-2xl overflow-hidden flex items-center justify-center h-48"
-                style={{ backgroundColor: 'var(--bg-card)', border: '1px solid rgba(212,175,55,0.12)' }}
-              >
-                <div className="text-center">
-                  <MapPin size={32} style={{ color: 'var(--gold)', margin: '0 auto 8px' }} />
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-inter)' }}>
-                    Dubai Media City, UAE
-                  </p>
+              <div className="glass-strong rounded-2xl p-6">
+                <h2 className="text-2xl font-black mb-4">Request a Quote</h2>
+                <p className="text-sm text-[var(--text-muted)] mb-3">To recommend the right coverage plan, please share:</p>
+                <ul className="text-sm text-[var(--text-muted)] space-y-2 list-disc pl-5">
+                  <li>Your coverage needs (24/7, nights, weekends, overflow, specific hours)</li>
+                  <li>Approx. call volume and peak times</li>
+                  <li>Your dispatch process (how you take bookings and assign drivers)</li>
+                  <li>Any additional services needed (admin/accounting/marketing)</li>
+                </ul>
+                <div className="mt-5">
+                  <GoldButton href="#contact-form" variant="primary">Get a Quote</GoldButton>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
-            <div className="glass-strong rounded-2xl p-8 md:p-10">
+            <div id="contact-form" className="glass-strong rounded-2xl p-6 md:p-8">
               {submitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center text-center py-12"
-                >
-                  <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center mb-4 border-2"
-                    style={{ borderColor: 'var(--gold)', backgroundColor: 'rgba(212,175,55,0.1)' }}
-                  >
-                    <Send size={24} style={{ color: 'var(--gold)' }} />
-                  </div>
-                  <h3 className="text-2xl font-black mb-3" style={{ fontFamily: 'var(--font-cinzel)', color: 'var(--gold)' }}>
-                    Form Submitted
-                  </h3>
-                  <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
-                    Thank you! This is a demo — connect a backend (e.g. Resend or SendGrid) to enable real delivery. We&apos;ll get back to you within 4 business hours once live.
-                  </p>
-                </motion.div>
+                <div className="text-center py-10">
+                  <h3 className="text-2xl font-black mb-3">Thank You</h3>
+                  <p className="text-[var(--text-muted)]">Your enquiry has been received. We’ll contact you about your request soon.</p>
+                </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <h3 className="text-2xl font-black mb-6" style={{ fontFamily: 'var(--font-cinzel)' }}>
-                    Send a Message
-                  </h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <h2 className="text-2xl font-black mb-2">Send Us a Message</h2>
+
                   {[
-                    { id: 'name', label: 'Full Name', type: 'text', placeholder: 'John Smith' },
-                    { id: 'email', label: 'Email Address', type: 'email', placeholder: 'john@company.com' },
-                  ].map((field) => (
-                    <div key={field.id} className="relative">
-                      <label
-                        htmlFor={field.id}
-                        className="block text-xs uppercase tracking-widest mb-2 font-semibold"
-                        style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-inter)' }}
-                      >
-                        {field.label}
-                      </label>
-                      <input
-                        id={field.id}
-                        type={field.type}
-                        placeholder={field.placeholder}
-                        required
-                        value={formState[field.id as keyof typeof formState]}
-                        onChange={(e) => setFormState((s) => ({ ...s, [field.id]: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
-                        style={{
-                          backgroundColor: 'rgba(255,255,255,0.04)',
-                          border: '1px solid rgba(212,175,55,0.2)',
-                          color: '#fff',
-                          fontFamily: 'var(--font-inter)',
-                        }}
-                        onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'var(--gold)'; }}
-                        onBlur={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(212,175,55,0.2)'; }}
-                      />
+                    ['fullName', 'Full Name'],
+                    ['companyName', 'Company Name'],
+                    ['phoneNumber', 'Phone Number'],
+                    ['email', 'Email'],
+                    ['countryCity', 'Country / City'],
+                    ['coverageHours', 'Preferred Coverage Hours'],
+                  ].map(([id, label]) => (
+                    <div key={id}>
+                      <label htmlFor={id} className="block text-sm font-semibold mb-1">{label}</label>
+                      <input id={id} required className="w-full rounded-lg border border-black/20 px-3 py-2 text-sm" />
                     </div>
                   ))}
+
+                  <fieldset>
+                    <legend className="block text-sm font-semibold mb-2">Services Needed</legend>
+                    <div className="grid sm:grid-cols-2 gap-2">
+                      {serviceOptions.map((service) => (
+                        <label key={service} className="flex items-center gap-2 text-sm border border-black/15 rounded-lg px-3 py-2">
+                          <input type="checkbox" name="services" value={service} />
+                          {service}
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+
                   <div>
-                    <label
-                      htmlFor="service"
-                      className="block text-xs uppercase tracking-widest mb-2 font-semibold"
-                      style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-inter)' }}
-                    >
-                      Service Needed
-                    </label>
-                    <select
-                      id="service"
-                      value={formState.service}
-                      onChange={(e) => setFormState((s) => ({ ...s, service: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl text-sm outline-none"
-                      style={{
-                        backgroundColor: 'rgba(255,255,255,0.04)',
-                        border: '1px solid rgba(212,175,55,0.2)',
-                        color: formState.service ? '#fff' : 'rgba(255,255,255,0.35)',
-                        fontFamily: 'var(--font-inter)',
-                      }}
-                    >
-                      <option value="" disabled style={{ backgroundColor: '#111' }}>Select a service</option>
-                      <option value="web" style={{ backgroundColor: '#111' }}>Web Development</option>
-                      <option value="design" style={{ backgroundColor: '#111' }}>UI/UX Design</option>
-                      <option value="mobile" style={{ backgroundColor: '#111' }}>Mobile App</option>
-                      <option value="branding" style={{ backgroundColor: '#111' }}>Brand Identity</option>
-                      <option value="ecommerce" style={{ backgroundColor: '#111' }}>E-Commerce</option>
-                      <option value="marketing" style={{ backgroundColor: '#111' }}>Digital Marketing</option>
-                    </select>
+                    <label htmlFor="message" className="block text-sm font-semibold mb-1">Message / Requirements</label>
+                    <textarea id="message" required rows={5} className="w-full rounded-lg border border-black/20 px-3 py-2 text-sm" />
                   </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-xs uppercase tracking-widest mb-2 font-semibold"
-                      style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-inter)' }}
-                    >
-                      Your Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      placeholder="Tell us about your project..."
-                      required
-                      value={formState.message}
-                      onChange={(e) => setFormState((s) => ({ ...s, message: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none transition-all"
-                      style={{
-                        backgroundColor: 'rgba(255,255,255,0.04)',
-                        border: '1px solid rgba(212,175,55,0.2)',
-                        color: '#fff',
-                        fontFamily: 'var(--font-inter)',
-                      }}
-                      onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'var(--gold)'; }}
-                      onBlur={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(212,175,55,0.2)'; }}
-                    />
-                  </div>
-                  <GoldButton type="submit" variant="primary" className="w-full justify-center">
-                    Send Message
-                  </GoldButton>
+
+                  <p className="text-xs text-[var(--text-muted)]">
+                    By submitting this form, you agree to be contacted about your enquiry.
+                  </p>
+
+                  <GoldButton type="submit" variant="primary" className="w-full justify-center">Send Message</GoldButton>
                 </form>
               )}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-24" style={{ backgroundColor: 'var(--bg-mid)' }}>
-          <div className="max-w-3xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-black" style={{ fontFamily: 'var(--font-cinzel)' }}>
-                Frequently Asked <span style={{ color: 'var(--gold)' }}>Questions</span>
-              </h2>
-            </div>
-            <div>
+        <section className="py-16 bg-[var(--bg-soft)] border-y border-black/10">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-3xl font-black mb-6">FAQ</h2>
+            <div className="space-y-3">
               {faqs.map((faq) => (
-                <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
+                <div key={faq.question} className="glass-strong rounded-xl p-4">
+                  <h3 className="font-bold mb-1">{faq.question}</h3>
+                  <p className="text-sm text-[var(--text-muted)]">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </div>
