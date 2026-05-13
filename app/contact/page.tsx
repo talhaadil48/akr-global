@@ -13,11 +13,6 @@ const contactInfo = [
   { icon: Mail, label: 'Email', value: 'info@taximservice.com', href: 'mailto:info@taximservice.com' },
   { icon: MapPin, label: 'Address', value: 'St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi', href: '#' },
 ];
-//@ts-ignore
-const servicesNeeded = [
-
-
-];
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
@@ -198,24 +193,6 @@ export default function ContactPage() {
                       />
                     </div>
                   ))}
-
-                  <div>
-                    <p className="block text-xs uppercase tracking-widest mb-2 font-semibold" style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-inter)' }}>
-                      Services Needed
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {servicesNeeded.map((service) => (
-                        <label key={service} className="flex items-center gap-2 rounded-lg px-3 py-2 border text-sm" style={{ borderColor: 'rgba(212,175,55,0.2)', color: 'rgba(255,255,255,0.72)', fontFamily: 'var(--font-inter)' }}>
-                          <input
-                            type="checkbox"
-                            checked={formState.services.includes(service)}
-                            onChange={() => toggleService(service)}
-                          />
-                          {service}
-                        </label>
-                      ))}
-                    </div>
-                  </div>
 
                   <div>
                     <label
