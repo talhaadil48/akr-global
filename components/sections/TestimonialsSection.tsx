@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
             className="text-4xl md:text-5xl font-black"
             style={{ fontFamily: 'var(--font-cinzel)' }}
           >
-            What Taxi Operators <span style={{ color: 'var(--gold)' }}>Say</span>
+            What Our Client  <span style={{ color: 'var(--gold)' }}>Say</span>
           </motion.h2>
         </div>
 

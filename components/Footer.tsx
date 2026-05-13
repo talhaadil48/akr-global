@@ -2,7 +2,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { X, Globe, MessageCircle, Star } from 'lucide-react';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from 'react-icons/fa';
 
 const serviceLinks = [
   { label: '24/7 Dispatch & Call Handling', href: '/services' },
@@ -20,10 +25,26 @@ const companyLinks = [
 ];
 
 const socialLinks = [
-  { icon: X, href: '#', label: 'X (Twitter)' },
-  { icon: Globe, href: '#', label: 'LinkedIn' },
-  { icon: MessageCircle, href: '#', label: 'Instagram' },
-  { icon: Star, href: '#', label: 'Dribbble' },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/1TyaN7k4wE/?mibextid=wwXIfr',
+    Icon: FaFacebookF,
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/akrglobaloutsourcing?igsh=MWRyM29zeDJ1d2NqaA==',
+    Icon: FaInstagram,
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/akr-global-outsourcing/',
+    Icon: FaLinkedinIn,
+  },
+  {
+    label: 'WhatsApp',
+    href: 'https://wa.me/447885432707',
+    Icon: FaWhatsapp,
+  },
 ];
 
 export default function Footer() {
@@ -61,12 +82,16 @@ export default function Footer() {
               operators.
             </p>
 
+            {/* Social Icons (React Icons - FontAwesome) */}
             <div className="flex gap-4">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
+              {socialLinks.map(({ label, href, Icon }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
+                  title={label}
                   className="w-9 h-9 rounded-full flex items-center justify-center border transition-all duration-300 hover:scale-110"
                   style={{
                     borderColor: 'rgba(212,175,55,0.3)',
@@ -85,7 +110,7 @@ export default function Footer() {
                     el.style.backgroundColor = 'transparent';
                   }}
                 >
-                  <Icon size={15} />
+                  <Icon size={16} />
                 </a>
               ))}
             </div>
@@ -107,7 +132,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors duration-200 hover:opacity-100"
+                    className="text-sm transition-colors duration-200"
                     style={{
                       color: 'rgba(255,255,255,0.5)',
                       fontFamily: 'var(--font-inter)',
@@ -185,10 +210,10 @@ export default function Footer() {
             >
               <li>
                 <a
-                  href="mailto:info@taximservice.com"
+                  href="mailto:info@akrglobaloutsourcing.com"
                   className="transition-colors hover:text-white"
                 >
-                  info@taximservice.com
+                  info@akrglobaloutsourcing.com
                 </a>
               </li>
               <li>
@@ -196,13 +221,13 @@ export default function Footer() {
                   href="tel:+923109910222"
                   className="transition-colors hover:text-white"
                 >
-                  +92 310 991 0222
+                  +92 310 9910222
                 </a>
               </li>
               <li className="leading-relaxed">
-                St 16, Chaklala Scheme-III,
+                House # AS 11 Row 2, NCEHS
                 <br />
-                Chaklala Cantt, Rawalpindi
+                Gulshan-e-Iqbal Block 10-A, Karachi
               </li>
             </ul>
           </div>

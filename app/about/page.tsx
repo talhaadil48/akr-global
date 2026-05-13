@@ -6,11 +6,11 @@ import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
 
 const values = [
-  { title: 'Reliability', description: 'If your line rings, someone answers—promptly and professionally.' },
+  { title: 'Reliability', description: 'If your line rings, someone answerspromptly and professionally.' },
   { title: 'Accuracy', description: 'Booking details matter. We reduce mistakes and rework.' },
   { title: 'Customer Care', description: 'Calm, respectful communication protects your reputation.' },
   { title: 'Accountability', description: 'Clear processes, reporting and performance standards.' },
-  { title: 'Partnership', description: 'We operate as part of your team—not a generic call centre.' },
+  { title: 'Partnership', description: 'We operate as part of your teamnot a generic call centre.' },
 ];
 
 const audiences = [
@@ -44,7 +44,7 @@ export default function AboutPage() {
               style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
             >
               AKR Global exists to help taxi and private hire businesses answer faster, dispatch smoother,
-              and operate reliably—without constant pressure from staffing gaps, night cover, and peak-time overload.
+              and operate reliablywithout constant pressure from staffing gaps, night cover, and peak-time overload.
             </motion.p>
           </div>
         </section>
@@ -56,18 +56,23 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.62)', fontFamily: 'var(--font-inter)' }}>
               <p>
-                Taxi companies operate in real time. A delay of seconds can mean a lost booking—and when demand
-                spikes, it&apos;s difficult to recruit, train and retain reliable dispatch staff quickly. Customer
-                expectations keep rising, while the phones keep ringing.
+                In the taxi and private hire industry, operations move in real time and there is no room for delay. A single missed call,
+                slow response, or unassigned booking can directly translate into lost revenue and dissatisfied customers. During peak hours,
+                when demand surges unexpectedly, even well-staffed in-house teams struggle to maintain consistency without pressure or errors.
               </p>
+
               <p>
-                AKR Global was created to provide trained operational support that blends into your business like
-                an in-house team. We follow your call style, booking rules, and service standards—so customers
-                receive a consistent experience and drivers get clear job flow.
+                AKR Global is built to remove that operational strain. We provide fully trained dispatch and call-handling professionals who
+                integrate seamlessly into your business as a true extension of your team. Every call is handled in your company’s name,
+                following your exact booking rules, escalation processes, and communication standards ensuring your customers experience
+                the same level of professionalism every time they contact you, regardless of volume or time of day.
               </p>
+
               <p>
-                Our approach is structured and measurable: quality checks, reporting, and continuous improvement.
-                Clients don&apos;t just get &ldquo;coverage&rdquo;—they get better performance and stronger customer experience.
+                Our service is not just about answering calls it is about strengthening your entire operation. We focus on reducing missed
+                bookings, improving job allocation speed, and maintaining consistent driver coordination even under high demand. With
+                structured workflows, performance monitoring, and continuous operational feedback, we help taxi operators increase efficiency,
+                reduce overhead pressure, and deliver a more reliable and scalable service without the cost and complexity of expanding in-house teams.
               </p>
             </div>
           </div>
@@ -114,12 +119,12 @@ export default function AboutPage() {
             </ul>
 
             <h2 className="text-4xl font-black mb-5" style={{ fontFamily: 'var(--font-cinzel)' }}>
-              Not a Scripted Call Centre—A Taxi Operations Partner
+              Not a Scripted Call CentreA Taxi Operations Partner
             </h2>
             <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.62)', fontFamily: 'var(--font-inter)' }}>
               We tailor procedures to your business: how you confirm addresses, what details you collect, how
               you handle delays, and how you communicate with drivers and customers. Your customers experience
-              your brand—just with stronger coverage and smoother operations.
+              your brandjust with stronger coverage and smoother operations.
             </p>
           </div>
         </section>

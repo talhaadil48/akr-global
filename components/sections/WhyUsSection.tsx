@@ -52,7 +52,7 @@ export default function WhyUsSection() {
             style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
           >
             Taxi operations don’t stop when the phones spike, staff are off, or demand changes suddenly.
-            AKR Global becomes an extension of your team—handling calls, bookings and dispatch support
+            AKR Global becomes an extension of your teamhandling calls, bookings and dispatch support
             with speed, accuracy and a calm professional tone. We help you protect bookings, improve
             response times, and maintain service quality during the busiest moments.
           </motion.p>

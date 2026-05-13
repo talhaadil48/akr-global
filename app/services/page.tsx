@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Star } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
@@ -44,7 +44,7 @@ const serviceItems = [
   {
     title: 'Admin & Operations Support',
     description:
-      'We handle behind-the-scenes tasks that slow teams down—organised, accurate and process-driven.',
+      'We handle behind-the-scenes tasks that slow teams downorganised, accurate and process-driven.',
     includes: [
       'Documentation and record handling',
       'Reporting support (daily/weekly/monthly)',
@@ -77,7 +77,7 @@ const serviceItems = [
   {
     title: 'Digital Marketing for Taxi Companies',
     description:
-      'Great operations need steady demand. We improve visibility and inbound leads using practical marketing focused on bookings—not vanity metrics.',
+      'Great operations need steady demand. We improve visibility and inbound leads using practical marketing focused on bookingsnot vanity metrics.',
     includes: [
       'Local SEO optimisation',
       'Google Ads / paid campaigns support',
@@ -145,18 +145,35 @@ export default function ServicesPage() {
               </motion.div>
             ))}
 
+            {/* UPGRADED OPTIONAL ADD-ON SECTION */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="glass-strong rounded-2xl p-8"
+              className="relative overflow-hidden rounded-2xl p-10 md:p-12 text-center mt-12"
+              style={{
+                background: 'linear-gradient(145deg, rgba(212, 175, 55, 0.1) 0%, rgba(20, 20, 20, 0.9) 100%)',
+                border: '1px solid rgba(212, 175, 55, 0.4)',
+                boxShadow: '0 10px 40px rgba(212, 175, 55, 0.1)',
+              }}
             >
-              <h2 className="text-2xl md:text-3xl font-black mb-4" style={{ fontFamily: 'var(--font-cinzel)' }}>
+              {/* Subtle top glow effect */}
+              <div 
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 blur-2xl opacity-40" 
+                style={{ backgroundColor: 'var(--gold)' }} 
+              />
+              
+              <div className="flex justify-center mb-4">
+                <Star size={32} style={{ color: 'var(--gold)' }} fill="var(--gold)" fillOpacity={0.2} />
+              </div>
+              
+              <h2 className="text-2xl md:text-4xl font-black mb-4" style={{ fontFamily: 'var(--font-cinzel)', color: 'var(--gold)' }}>
                 Optional Add-On: Project & Operations Management
               </h2>
-              <p className="text-sm md:text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'var(--font-inter)' }}>
+              
+              <p className="text-base md:text-lg leading-relaxed max-w-3xl mx-auto" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-inter)' }}>
                 From new workflows to service expansion, we help you implement improvements without
-                disrupting day-to-day operations.
+                disrupting day-to-day operations. Elevate your business efficiency seamlessly.
               </p>
             </motion.div>
           </div>
@@ -168,7 +185,7 @@ export default function ServicesPage() {
               Not Sure Which Service You Need?
             </h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
-              Tell us your current challenge—missed calls, peak overload, staffing gaps, back-office
+              Tell us your current challengemissed calls, peak overload, staffing gaps, back-office
               pressure, or growth goals. We&apos;ll recommend the best plan.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

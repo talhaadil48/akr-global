@@ -9,9 +9,9 @@ import GoldButton from '@/components/GoldButton';
 import { faqs } from '@/lib/data';
 
 const contactInfo = [
-  { icon: Phone, label: 'Phone', value: '+92 310 991 0222', href: 'tel:+923109910222' },
-  { icon: Mail, label: 'Email', value: 'info@taximservice.com', href: 'mailto:info@taximservice.com' },
-  { icon: MapPin, label: 'Address', value: 'St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi', href: '#' },
+  { icon: Phone, label: 'Phone', value: '+92 310 9910222', href: 'tel:+923109910222' },
+  { icon: Mail, label: 'Email', value: 'info@akrglobaloutsourcing.com', href: 'mailto:info@akrglobaloutsourcing.com' },
+  { icon: MapPin, label: 'Address', value: 'House # AS 11 Row 2, NCEHS, Gulshan-e-lqbal block 10-A, karachi', href: '#' },
 ];
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
@@ -99,7 +99,7 @@ export default function ContactPage() {
               className="text-lg leading-relaxed"
               style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
             >
-              Whether you need 24/7 dispatch coverage, overflow support, admin help, or marketing—tell us
+              Whether you need 24/7 dispatch coverage, overflow support, admin help, or marketing tell us
               what&apos;s happening in your operation today. We&apos;ll recommend the right plan and next steps.
             </motion.p>
           </div>
