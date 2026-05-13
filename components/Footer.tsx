@@ -70,7 +70,7 @@ export default function Footer() {
               <li className="flex items-start gap-2"><Phone size={15} className="mt-0.5" /> <a href="tel:+923109910222">+92 310 991 0222</a></li>
               <li className="flex items-start gap-2"><Mail size={15} className="mt-0.5" /> <a href="mailto:info@taximservice.com">info@taximservice.com</a></li>
               <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5" /> St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi</li>
-              <li className="text-white/65">UK service coverage supported with dedicated taxi workflows and SLA-based operations.</li>
+              <li className="text-white/65">UK-focused support is delivered from our Pakistan operations centre using UK taxi workflows and SLA-based coverage.</li>
             </ul>
           </div>
         </div>

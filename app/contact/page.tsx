@@ -66,7 +66,7 @@ export default function ContactPage() {
                   <li><strong>Address:</strong> St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi</li>
                 </ul>
                 <p className="mt-3 text-xs text-[var(--text-muted)]">
-                  We provide UK-focused taxi dispatch support with structured onboarding, UK operator workflows, and SLA-driven service delivery.
+                  We provide UK-focused taxi dispatch support from our Pakistan operations centre, with structured onboarding, UK operator workflows, and SLA-driven coverage.
                 </p>
               </div>
 
