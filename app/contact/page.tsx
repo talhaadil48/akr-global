@@ -15,13 +15,8 @@ const contactInfo = [
 ];
 
 const servicesNeeded = [
-  '24/7 Dispatch & Call Handling',
-  'Overflow / Peak-Time Cover',
-  'Administrative Support',
-  'Accounting & Bookkeeping Support',
-  'Email & Customer Inbox Management',
-  'Digital Marketing',
-  'Project & Operations Management',
+
+
 ];
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
@@ -149,9 +144,7 @@ export default function ContactPage() {
                   <li>Your dispatch process (how you take bookings and assign drivers)</li>
                   <li>Any additional services needed (admin/accounting/marketing)</li>
                 </ul>
-                <div className="mt-6">
-                  <GoldButton href="/contact" variant="primary">Get a Quote</GoldButton>
-                </div>
+              
               </div>
             </div>
 
