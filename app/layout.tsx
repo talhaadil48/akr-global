@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
-import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import type { Metadata } from 'next';
+import './globals.css';
+import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 
 export const metadata: Metadata = {
-  title: "AKR Global Studios | Elite Digital Agency",
+  title: 'AKR Global | 24/7 Taxi Dispatch Outsourcing for UK Operators',
   description:
-    "AKR Global Studios is an elite outsourcing agency delivering world-class web development, UI/UX design, mobile apps, and branding solutions to ambitious businesses worldwide.",
-  keywords: ["digital agency", "web development", "UI/UX design", "outsourcing", "branding"],
+    'AKR Global provides 24/7 taxi dispatch outsourcing, call handling, admin, and back-office support for UK taxi and private hire operators.',
+  keywords: [
+    'taxi dispatch outsourcing',
+    'UK taxi call handling',
+    'private hire support',
+    'overflow dispatch support',
+  ],
 };
 
 export default function RootLayout({
@@ -16,20 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="h-full antialiased"
-      style={{ colorScheme: "dark" }}
-    >
-      <head>
-      </head>
-      <body className="min-h-full flex flex-col bg-black text-white">
+    <html lang="en" className="h-full antialiased">
+      <body className="min-h-full flex flex-col bg-[var(--bg-main)] text-[var(--text-main)]">
         <SmoothScrollProvider>
-          <div className="flex flex-col min-h-full bg-black">{children}</div>
+          <div className="flex flex-col min-h-full">{children}</div>
         </SmoothScrollProvider>
       </body>
     </html>
   );
 }
-
-

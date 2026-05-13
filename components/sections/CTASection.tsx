@@ -105,8 +105,8 @@ export default function CTASection() {
           <GoldButton href="/contact" variant="primary">
             Start Your Project
           </GoldButton>
-          <GoldButton href="/pricing" variant="ghost">
-            View Pricing
+          <GoldButton href="/contact" variant="ghost">
+            Get a Quote
           </GoldButton>
         </motion.div>
       </div>
