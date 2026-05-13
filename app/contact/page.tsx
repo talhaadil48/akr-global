@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
+import Image from 'next/image';
 
 const faqs = [
   {
@@ -49,7 +50,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="glass-strong rounded-2xl p-4">
-              <img src="/images/contact-hero-placeholder.svg" alt="Contact and support placeholder" className="w-full h-auto rounded-xl" />
+              <Image src="/images/contact-hero-placeholder.svg" alt="Contact and support placeholder" className="w-full h-auto rounded-xl" width={1000} height={700} />
             </div>
           </div>
         </section>

@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
+import Image from 'next/image';
 
 const values = [
   'Reliability: If your line rings, someone answers—promptly and professionally.',
@@ -32,7 +33,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="glass-strong rounded-2xl p-4">
-              <img src="/images/about-hero-placeholder.svg" alt="Taxi operations team placeholder" className="w-full h-auto rounded-xl" />
+              <Image src="/images/about-hero-placeholder.svg" alt="Taxi operations team placeholder" className="w-full h-auto rounded-xl" width={1000} height={700} />
             </div>
           </div>
         </section>
@@ -65,7 +66,7 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="glass-strong rounded-2xl p-4">
-              <img src="/images/about-values-placeholder.svg" alt="Service quality placeholder" className="w-full h-auto rounded-xl" />
+              <Image src="/images/about-values-placeholder.svg" alt="Service quality placeholder" className="w-full h-auto rounded-xl" width={1000} height={700} />
             </div>
           </div>
         </section>

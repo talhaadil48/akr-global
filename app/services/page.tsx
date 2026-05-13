@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
+import Image from 'next/image';
 
 const serviceItems = [
   {
@@ -98,7 +99,7 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="glass-strong rounded-2xl p-4">
-              <img src="/images/services-overview-placeholder.svg" alt="Taxi service support placeholder" className="w-full h-auto rounded-xl" />
+              <Image src="/images/services-overview-placeholder.svg" alt="Taxi service support placeholder" className="w-full h-auto rounded-xl" width={1000} height={700} />
             </div>
           </div>
         </section>

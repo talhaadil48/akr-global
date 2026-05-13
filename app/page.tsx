@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoldButton from '@/components/GoldButton';
+import Image from 'next/image';
 
 const highlights = [
   'Answer calls fast—even during peak demand',
@@ -59,7 +60,7 @@ export default function Home() {
               </div>
             </div>
             <div className="glass-strong rounded-2xl p-4">
-              <img src="/images/home-hero-placeholder.svg" alt="Taxi dispatch operations team placeholder" className="w-full h-auto rounded-xl" />
+              <Image src="/images/home-hero-placeholder.svg" alt="Taxi dispatch operations team placeholder" className="w-full h-auto rounded-xl" width={1200} height={800} />
             </div>
           </div>
         </section>
@@ -83,7 +84,7 @@ export default function Home() {
               </p>
             </div>
             <div className="glass-strong rounded-2xl p-4">
-              <img src="/images/home-operations-placeholder.svg" alt="Dispatch dashboard placeholder" className="w-full h-auto rounded-xl" />
+              <Image src="/images/home-operations-placeholder.svg" alt="Dispatch dashboard placeholder" className="w-full h-auto rounded-xl" width={1000} height={700} />
             </div>
           </div>
         </section>
