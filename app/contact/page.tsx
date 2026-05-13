@@ -13,7 +13,7 @@ const contactInfo = [
   { icon: Mail, label: 'Email', value: 'info@taximservice.com', href: 'mailto:info@taximservice.com' },
   { icon: MapPin, label: 'Address', value: 'St 16, Chaklala Scheme-III, Chaklala Cantt, Rawalpindi', href: '#' },
 ];
-
+//@ts-ignore
 const servicesNeeded = [
 
 
