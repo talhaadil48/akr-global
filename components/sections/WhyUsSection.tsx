@@ -41,9 +41,21 @@ export default function WhyUsSection() {
             className="text-4xl md:text-5xl font-black leading-tight"
             style={{ fontFamily: 'var(--font-cinzel)' }}
           >
-            The AKR{' '}
-            <span style={{ color: 'var(--gold)' }}>Difference</span>
+            A Reliable Outsourcing Partner for{' '}
+            <span style={{ color: 'var(--gold)' }}>Taxi Companies</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base mt-4 max-w-4xl mx-auto leading-relaxed"
+            style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
+          >
+            Taxi operations don’t stop when the phones spike, staff are off, or demand changes suddenly.
+            AKR Global becomes an extension of your team—handling calls, bookings and dispatch support
+            with speed, accuracy and a calm professional tone. We help you protect bookings, improve
+            response times, and maintain service quality during the busiest moments.
+          </motion.p>
         </div>
 
         {/* Grid */}

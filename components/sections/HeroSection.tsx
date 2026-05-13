@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { heroContent } from '@/lib/data';
+import GoldButton from '@/components/GoldButton';
 
 const HERO_BG_IMAGE = 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=2000&q=80';
 
@@ -32,7 +33,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-20 text-center"> 
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-20 text-center">
         <motion.h1
           className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight"
           style={{ fontFamily: 'var(--font-cinzel)', color: '#ffffff' }}
@@ -42,6 +43,24 @@ export default function HeroSection() {
         >
           {heroContent.headline}
         </motion.h1>
+        <motion.p
+          className="text-base md:text-lg leading-relaxed max-w-4xl mx-auto mt-8"
+          style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-inter)' }}
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+        >
+          {heroContent.subheading}
+        </motion.p>
+        <motion.div
+          className="mt-10 flex flex-wrap justify-center gap-4"
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+        >
+          <GoldButton href="/contact" variant="primary">{heroContent.ctaPrimary}</GoldButton>
+          <GoldButton href="/contact" variant="ghost">{heroContent.ctaSecondary}</GoldButton>
+        </motion.div>
       </div>
     </section>
   );

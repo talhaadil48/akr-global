@@ -4,19 +4,17 @@ import Link from 'next/link';
 import { X, Globe, MessageCircle, Star } from 'lucide-react';
 
 const serviceLinks = [
-  { label: 'Web Development', href: '/services' },
-  { label: 'UI/UX Design', href: '/services' },
-  { label: 'Mobile Apps', href: '/services' },
-  { label: 'Brand Identity', href: '/services' },
-  { label: 'E-Commerce', href: '/services' },
+  { label: '24/7 Dispatch & Call Handling', href: '/services' },
+  { label: 'Overflow / Peak-Time Cover', href: '/services' },
+  { label: 'Administrative Support', href: '/services' },
+  { label: 'Accounting & Bookkeeping Support', href: '/services' },
+  { label: 'Email & Inbox Management', href: '/services' },
   { label: 'Digital Marketing', href: '/services' },
 ];
 
 const companyLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Our Process', href: '/about' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Pricing', href: '/pricing' },
+  { label: 'Our Process', href: '/services' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -41,9 +39,9 @@ export default function Footer() {
               AKR{' '}
               <span style={{ color: 'var(--gold)' }}>GLOBAL</span>
             </h3>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}>
-              Elite digital agency crafting world-class experiences for ambitious brands.
-            </p>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}>
+                24/7 taxi dispatch and operational outsourcing support for UK operators.
+              </p>
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
@@ -131,18 +129,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}>
               <li>
-                <a href="mailto:hello@akrglobal.studio" className="transition-colors hover:text-white">
-                  hello@akrglobal.studio
+                <a href="mailto:info@taximservice.com" className="transition-colors hover:text-white">
+                  info@taximservice.com
                 </a>
               </li>
               <li>
-                <a href="tel:+1234567890" className="transition-colors hover:text-white">
-                  +1 (234) 567-890
+                <a href="tel:+923109910222" className="transition-colors hover:text-white">
+                  +92 310 991 0222
                 </a>
               </li>
               <li className="leading-relaxed">
-                Dubai Media City, UAE<br />
-                Bengaluru Tech Park, India
+                St 16, Chaklala Scheme-III,<br />
+                Chaklala Cantt, Rawalpindi
               </li>
             </ul>
           </div>
@@ -153,10 +151,10 @@ export default function Footer() {
           className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 border-t text-xs"
           style={{ borderColor: 'rgba(212,175,55,0.1)', color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-inter)' }}
         >
-          <p>© {new Date().getFullYear()} AKR Global Studios. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AKR Global. All rights reserved.</p>
           <p>
             Crafted with precision by{' '}
-            <span style={{ color: 'var(--gold)' }}>AKR Global Studios</span>
+            <span style={{ color: 'var(--gold)' }}>AKR Global</span>
           </p>
         </div>
       </div>

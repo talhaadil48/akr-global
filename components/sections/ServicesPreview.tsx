@@ -33,7 +33,7 @@ export default function ServicesPreview() {
             className="text-xs tracking-[0.3em] uppercase font-semibold mb-4"
             style={{ color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
           >
-            What We Do
+            Services Overview
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -42,8 +42,8 @@ export default function ServicesPreview() {
             className="text-4xl md:text-5xl font-black leading-tight"
             style={{ fontFamily: 'var(--font-cinzel)' }}
           >
-            Our Core{' '}
-            <span style={{ color: 'var(--gold)' }}>Services</span>
+            Services Built for Real{' '}
+            <span style={{ color: 'var(--gold)' }}>Taxi Operations</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function ServicesPreview() {
             className="text-base mt-4 max-w-xl mx-auto"
             style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-inter)' }}
           >
-            From concept to launch, we deliver end-to-end digital solutions that elevate your brand and accelerate growth.
+            Choose one service or combine multiple to create a complete outsourced operations package.
           </motion.p>
         </div>
 
@@ -69,7 +69,7 @@ export default function ServicesPreview() {
                 transition={{ delay: i * 0.08, duration: 0.6 }}
               >
                 <TiltCard
-                  className="h-full rounded-2xl p-7 glass-strong transition-all duration-300 group hover:border-[var(--gold)] cursor-default"
+                    className="h-full rounded-2xl p-7 glass-strong transition-all duration-300 group hover:border-[var(--gold)] cursor-default"
                   tiltOptions={{ max: 10, speed: 400, glare: true, 'max-glare': 0.1 }}
                 >
                   <div
@@ -84,19 +84,9 @@ export default function ServicesPreview() {
                   >
                     {service.title}
                   </h3>
-                  <p
-                    className="text-sm leading-relaxed mb-5"
-                    style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
-                  >
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
                     {service.description}
                   </p>
-                  <Link
-                    href="/services"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:gap-3"
-                    style={{ color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
-                  >
-                    Learn More <ArrowRight size={14} />
-                  </Link>
                 </TiltCard>
               </motion.div>
             );

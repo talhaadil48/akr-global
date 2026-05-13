@@ -75,7 +75,7 @@ export default function CTASection() {
           className="text-xs tracking-[0.3em] uppercase font-semibold mb-4"
           style={{ color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
         >
-          Ready to Begin?
+          Final CTA
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -84,8 +84,7 @@ export default function CTASection() {
           className="text-4xl md:text-6xl font-black leading-tight mb-6"
           style={{ fontFamily: 'var(--font-cinzel)' }}
         >
-          Let&apos;s Build Something{' '}
-          <span className="shimmer-text">Exceptional</span>
+          Ready to Improve Dispatch Performance Without Hiring More Staff?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -94,7 +93,7 @@ export default function CTASection() {
           className="text-base md:text-lg mb-10 max-w-2xl mx-auto"
           style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
         >
-          Join 180+ ambitious companies that trusted AKR Global Studios to transform their digital presence. Let&apos;s make your vision a reality.
+          Start with a short trial or request a tailored quote. We&apos;ll recommend the right coverage plan for your taxi operation.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,10 +102,10 @@ export default function CTASection() {
           className="flex flex-wrap justify-center gap-4"
         >
           <GoldButton href="/contact" variant="primary">
-            Start Your Project
+            Start Free Trial
           </GoldButton>
-          <GoldButton href="/pricing" variant="ghost">
-            View Pricing
+          <GoldButton href="/contact" variant="ghost">
+            Contact Sales
           </GoldButton>
         </motion.div>
       </div>

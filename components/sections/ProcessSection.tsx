@@ -20,7 +20,7 @@ export default function ProcessSection() {
             className="text-xs tracking-[0.3em] uppercase font-semibold mb-4"
             style={{ color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
           >
-            How We Work
+            How It Works
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -29,8 +29,8 @@ export default function ProcessSection() {
             className="text-4xl md:text-5xl font-black"
             style={{ fontFamily: 'var(--font-cinzel)' }}
           >
-            Our{' '}
-            <span style={{ color: 'var(--gold)' }}>Process</span>
+            Simple Setup. Smooth Delivery.{' '}
+            <span style={{ color: 'var(--gold)' }}>Ongoing Improvement.</span>
           </motion.h2>
         </div>
 

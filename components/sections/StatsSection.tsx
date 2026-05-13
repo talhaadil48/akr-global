@@ -2,8 +2,8 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { stats } from '@/lib/data';
-import AnimatedCounter from '@/components/AnimatedCounter';
+import { CheckCircle } from 'lucide-react';
+import { quickHighlights } from '@/lib/data';
 
 export default function StatsSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,38 +19,28 @@ export default function StatsSection() {
       }}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x"
-          style={{ borderColor: 'rgba(212,175,55,0.12)' }}
-        >
-          {stats.map((stat, i) => (
+        <div className="text-center mb-10">
+          <p
+            className="text-xs tracking-[0.3em] uppercase font-semibold mb-3"
+            style={{ color: 'var(--gold)', fontFamily: 'var(--font-inter)' }}
+          >
+            Quick Highlights
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {quickHighlights.map((item, i) => (
             <motion.div
-              key={stat.label}
+              key={item}
               initial={{ opacity: 0, y: 40, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col items-center text-center px-6 py-4 group"
+              className="flex items-start gap-3 rounded-xl p-4 border"
+              style={{ borderColor: 'rgba(212,175,55,0.18)', backgroundColor: 'rgba(255,255,255,0.02)' }}
             >
-              <span
-                className="text-5xl md:text-6xl font-black mb-2 transition-all duration-300 group-hover:gold-glow-text"
-                style={{
-                  fontFamily: 'var(--font-cinzel)',
-                  color: 'var(--gold)',
-                }}
-              >
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} duration={2000} />
+              <CheckCircle size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--gold)' }} />
+              <span className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-inter)' }}>
+                {item}
               </span>
-              <span
-                className="text-xs tracking-[0.15em] uppercase font-medium"
-                style={{ color: 'rgba(255,255,255,0.45)', fontFamily: 'var(--font-inter)' }}
-              >
-                {stat.label}
-              </span>
-              {i < stats.length - 1 && (
-                <div
-                  className="absolute right-0 top-1/4 h-1/2 w-px hidden md:block"
-                  style={{ backgroundColor: 'rgba(212,175,55,0.12)' }}
-                />
-              )}
             </motion.div>
           ))}
         </div>
