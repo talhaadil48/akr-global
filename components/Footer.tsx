@@ -218,17 +218,13 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+923109910222"
+                  href="tel:+447885432707"
                   className="transition-colors hover:text-white"
                 >
-                  +92 310 9910222
+                  +44 78854 32707
                 </a>
               </li>
-              <li className="leading-relaxed">
-                House # AS 11 Row 2, NCEHS
-                <br />
-                Gulshan-e-Iqbal Block 10-A, Karachi
-              </li>
+             
             </ul>
           </div>
         </div>

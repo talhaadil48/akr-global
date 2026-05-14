@@ -9,9 +9,8 @@ import GoldButton from '@/components/GoldButton';
 import { faqs } from '@/lib/data';
 
 const contactInfo = [
-  { icon: Phone, label: 'Phone', value: '+92 310 9910222', href: 'tel:+923109910222' },
+  { icon: Phone, label: 'Phone', value: '+44 78854 32707', href: 'tel:+447885432707' },
   { icon: Mail, label: 'Email', value: 'info@akrglobaloutsourcing.com', href: 'mailto:info@akrglobaloutsourcing.com' },
-  { icon: MapPin, label: 'Address', value: 'House # AS 11 Row 2, NCEHS, Gulshan-e-lqbal block 10-A, karachi', href: '#' },
 ];
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {

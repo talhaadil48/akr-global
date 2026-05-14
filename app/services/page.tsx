@@ -185,8 +185,7 @@ export default function ServicesPage() {
               Not Sure Which Service You Need?
             </h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}>
-              Tell us your current challengemissed calls, peak overload, staffing gaps, back-office
-              pressure, or growth goals. We&apos;ll recommend the best plan.
+             Tell us your current challenges, such as missed calls, peak-time overload, staffing gaps, back-office pressure, or growth goals. We’ll recommend the best plan.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <GoldButton href="/contact" variant="primary">Get a Quote</GoldButton>

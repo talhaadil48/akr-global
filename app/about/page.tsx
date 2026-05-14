@@ -10,7 +10,7 @@ const values = [
   { title: 'Accuracy', description: 'Booking details matter. We reduce mistakes and rework.' },
   { title: 'Customer Care', description: 'Calm, respectful communication protects your reputation.' },
   { title: 'Accountability', description: 'Clear processes, reporting and performance standards.' },
-  { title: 'Partnership', description: 'We operate as part of your teamnot a generic call centre.' },
+  { title: 'Partnership', description: 'We operate as part of your team not a generic call centre.' },
 ];
 
 const audiences = [
@@ -44,7 +44,7 @@ export default function AboutPage() {
               style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-inter)' }}
             >
               AKR Global exists to help taxi and private hire businesses answer faster, dispatch smoother,
-              and operate reliablywithout constant pressure from staffing gaps, night cover, and peak-time overload.
+              and operate reliably without constant pressure from staffing gaps, night cover, and peak-time overload.
             </motion.p>
           </div>
         </section>

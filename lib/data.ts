@@ -1,13 +1,13 @@
 export const heroContent = {
   headline: '24/7 Taxi Dispatch Outsourcing for UK Operators',
   subheading:
-    'AKR Global supports taxi and private hire businesses across the UK with professional call handling, dispatch support, admin and back-office assistanceso you capture more bookings, reduce staffing pressure, and keep drivers moving.',
+    'AKR Global supports taxi and private hire businesses across the UK with professional call handling, dispatch support, admin and back-office assistance so you capture more bookings, reduce staffing pressure, and keep drivers moving.',
   ctaPrimary: 'Start Free Trial',
   ctaSecondary: 'Get a Quote',
 };
 
 export const quickHighlights = [
-  'Answer calls fasteven during peak demand',
+  'Answer calls faster, even during peak demand.',
   'Trained dispatch operators using UK taxi workflows',
   'Works with your existing dispatch system and booking rules',
   'Flexible cover: overflow, nights, weekends, or full-time support',
